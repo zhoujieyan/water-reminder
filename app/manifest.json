@@ -1,0 +1,116 @@
+{
+  "name": "水宝提醒 - 趣味喝水助手",
+  "short_name": "水宝提醒",
+  "description": "帮助办公室打工人养成喝水习惯的趣味卡通风格PWA应用",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "./",
+  "theme_color": "#4a90e2",
+  "background_color": "#f8fbff",
+  "icons": [
+    {
+      "src": "assets/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/screenshot-1.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "assets/screenshot-2.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "记录喝水",
+      "short_name": "喝水",
+      "description": "快速记录喝了一杯水",
+      "url": "./index.html?action=drink"
+    },
+    {
+      "name": "查看历史",
+      "short_name": "历史",
+      "description": "查看喝水历史记录",
+      "url": "./index.html?action=history"
+    },
+    {
+      "name": "今日统计",
+      "short_name": "统计",
+      "description": "查看今日喝水统计",
+      "url": "./index.html?action=stats"
+    }
+  ],
+  "categories": [
+    "health",
+    "productivity",
+    "lifestyle"
+  ],
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+water",
+      "url": "./index.html?url=%s"
+    }
+  ],
+  "permissions": [
+    "notifications",
+    "storage"
+  ]
+}
