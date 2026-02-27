@@ -1,0 +1,226 @@
+/* 趣味卡通风格卡片组件 */
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 24px;
+  transition: all var(--transition-normal) ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+/* 悬停效果 */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* 卡片头部 */
+.card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.card__title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xl);
+  color: var(--text-primary);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card__subtitle {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin: 4px 0 0 0;
+}
+
+.card__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+}
+
+/* 卡片内容 */
+.card__content {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.card__content p:last-child {
+  margin-bottom: 0;
+}
+
+/* 卡片底部 */
+.card__footer {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 卡片变体 */
+.card--primary {
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+  color: white;
+  border: none;
+}
+
+.card--primary .card__title,
+.card--primary .card__content,
+.card--primary .card__subtitle {
+  color: white;
+}
+
+.card--primary .card__header {
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.card--primary .card__footer {
+  border-top-color: rgba(255, 255, 255, 0.3);
+}
+
+.card--success {
+  border-left: 6px solid var(--primary-green);
+}
+
+.card--warning {
+  border-left: 6px solid var(--accent-yellow);
+}
+
+.card--accent {
+  border-left: 6px solid var(--accent-pink);
+}
+
+/* 圆角卡片 */
+.card--rounded {
+  border-radius: 24px;
+}
+
+/* 紧凑卡片 */
+.card--compact {
+  padding: 16px;
+}
+
+.card--compact .card__header {
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+}
+
+.card--compact .card__footer {
+  margin-top: 12px;
+  padding-top: 12px;
+}
+
+/* 浮动卡片 */
+.card--float {
+  animation: float-card 3s ease-in-out infinite;
+}
+
+/* 装饰元素 */
+.card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.card__content {
+  position: relative;
+  z-index: 1;
+}
+
+/* 水杯角色装饰 */
+.card__cup-decoration {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 120px;
+  height: 120px;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* 动画关键帧 */
+@keyframes float-card {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* 卡片网格布局 */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 24px 0;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .card {
+    padding: 20px;
+  }
+}
+
+/* 交互式卡片 */
+.card--interactive {
+  cursor: pointer;
+}
+
+.card--interactive:active {
+  transform: scale(0.98);
+}
+
+/* 卡片状态 */
+.card--new {
+  border: 2px dashed var(--primary-blue);
+  background-color: rgba(74, 144, 226, 0.05);
+}
+
+.card--highlight {
+  animation: highlight-pulse 2s ease;
+}
+
+@keyframes highlight-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(74, 144, 226, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(74, 144, 226, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(74, 144, 226, 0);
+  }
+}
