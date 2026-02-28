@@ -1,0 +1,60 @@
+/* 趣味卡通风格UI色彩变量体系 */
+:root {
+  /* 主色调 - 蓝色系 */
+  --primary-blue: #4A90E2;
+  --primary-blue-light: #6BA8FF;
+  --primary-blue-dark: #2C6CB0;
+  
+  /* 主色调 - 绿色系 */
+  --primary-green: #50C878;
+  --primary-green-light: #70E898;
+  --primary-green-dark: #2E9C5E;
+  
+  /* 辅助色 - 活泼色彩 */
+  --accent-yellow: #FFD166;
+  --accent-orange: #FF9A5A;
+  --accent-pink: #FF6B8B;
+  --accent-purple: #9D6BFF;
+  
+  /* 中性色 - 背景与文本 */
+  --bg-color: #F8FBFF;
+  --card-bg: #FFFFFF;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+  --border-color: #E0E6FF;
+  
+  /* 状态色 */
+  --success-color: #50C878;
+  --warning-color: #FFD166;
+  --error-color: #FF6B8B;
+  --info-color: #4A90E2;
+  
+  /* 字体变量 */
+  --font-family-base: 'Arial Rounded MT Bold', 'Arial', sans-serif;
+  --font-family-heading: 'Comic Sans MS', 'Chalkboard SE', cursive;
+  
+  /* 字体大小 */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+  
+  /* 圆角 */
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+  --border-radius-full: 999px;
+  
+  /* 阴影 */
+  --shadow-sm: 0 4px 8px rgba(74, 144, 226, 0.1);
+  --shadow-md: 0 8px 16px rgba(74, 144, 226, 0.15);
+  --shadow-lg: 0 12px 24px rgba(74, 144, 226, 0.2);
+  
+  /* 动画时长 */
+  --transition-fast: 150ms;
+  --transition-normal: 300ms;
+  --transition-slow: 500ms;
+}
